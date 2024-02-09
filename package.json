@@ -88,7 +88,7 @@
     }
   },
   "lint-staged": {
-    "*.{js,ts,vue}": "eslint --fix",
+    "*.{js,ts,vue}": "eslint --cache --fix",
     "*.scss": "prettier --write"
   }
 }
