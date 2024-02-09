@@ -49,7 +49,7 @@ import { useRouter } from 'vue-router';
 import { Coin, Connection, Document } from '@element-plus/icons-vue';
 import serialize from 'serialize-javascript';
 
-import { TMagicDialog, tMagicMessage, tMagicMessageBox } from '@tmagic/design';
+import { TMagicDialog, tMagicMessage } from '@tmagic/design';
 import { DatasourceTypeOption, editorService, MenuBarData, MoveableOptions, TMagicEditor } from '@tmagic/editor';
 import type { MContainer, MNode } from '@tmagic/schema';
 import { NodeType } from '@tmagic/schema';
@@ -124,11 +124,11 @@ const menu: MenuBarData = {
       handler: async (services) => {
         if (services?.editorService.get('modifiedNodeIds').size > 0) {
           try {
-            await tMagicMessageBox.confirm('有修改未保存，是否先保存再预览', '提示', {
+            /* await tMagicMessageBox.confirm('有修改未保存，是否先保存再预览', '提示', {
               confirmButtonText: '保存并预览',
               cancelButtonText: '预览',
               type: 'warning',
-            });
+            }); */
             save();
             tMagicMessage.success('保存成功');
           } catch (e) {

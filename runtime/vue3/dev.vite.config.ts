@@ -19,11 +19,24 @@
 import path from 'path';
 
 import { defineConfig } from 'vite';
+// import { VantResolver } from '@vant/auto-import-resolver';
 import vue from '@vitejs/plugin-vue';
 import vueJsx from '@vitejs/plugin-vue-jsx';
+import { presetAttributify, presetUno } from 'unocss';
+// import Components from 'unplugin-vue-components/vite';
+import UnoCSS from 'unocss/vite';
 
 export default defineConfig({
-  plugins: [vue(), vueJsx()],
+  plugins: [
+    vue(),
+    vueJsx(),
+    /* Components({
+      resolvers: [VantResolver()],
+    }), */
+    UnoCSS({
+      presets: [presetAttributify(), presetUno()],
+    }),
+  ],
 
   resolve: {
     alias: [

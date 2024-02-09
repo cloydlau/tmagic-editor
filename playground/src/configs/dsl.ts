@@ -54,7 +54,7 @@ export default {
       id: 'page_299',
       name: 'index',
       title: '',
-      layout: 'absolute',
+      layout: 'relative',
       style: {
         position: 'relative',
         left: 0,
@@ -117,7 +117,7 @@ export default {
         ],
       },
       items: [
-        {
+        /* {
           type: 'text',
           id: 'text_9027',
           style: {
@@ -357,7 +357,7 @@ export default {
               created: [],
             },
           ],
-        },
+        }, */
       ],
     },
   ],

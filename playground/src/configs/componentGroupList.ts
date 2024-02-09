@@ -44,6 +44,21 @@ export default [
         text: '二维码',
         type: 'qrcode',
       },
+      {
+        icon: 'https://api.iconify.design/material-symbols:view-carousel-outline.svg',
+        text: '图片\n广告',
+        type: 'swipe',
+      },
+      {
+        icon: 'https://api.iconify.design/pixelarticons:section-plus.svg',
+        text: '热区',
+        type: 'hotarea',
+      },
+      {
+        icon: 'https://api.iconify.design/material-symbols:data-table.svg',
+        text: '标签页',
+        type: 'tab',
+      },
     ],
   },
   {
