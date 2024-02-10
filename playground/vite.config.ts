@@ -46,7 +46,7 @@ export default defineConfig({
     }),
   ],
 
-  base: '/tmagic-editor/playground/',
+  base: process.env.NODE_ENV === 'production' ? './' : '/tmagic-editor/playground/',
 
   resolve: {
     alias: [

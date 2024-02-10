@@ -17,7 +17,7 @@
           muted
           ref="videoRef"
         />
-        <img v-else :src="item.src" style="width: 100%" block />
+        <img v-else :src="item.src" style="width: 100%" block object-cover />
       </van-swipe-item>
     </van-swipe>
   </div>

@@ -2,7 +2,7 @@ import { FolderOpened, Grid, PictureFilled, SwitchButton, Ticket, Tickets } from
 
 export default [
   {
-    title: '示例容器',
+    title: '容器',
     items: [
       {
         icon: FolderOpened,
@@ -22,7 +22,7 @@ export default [
     ],
   },
   {
-    title: '示例组件',
+    title: '组件',
     items: [
       {
         icon: Tickets,

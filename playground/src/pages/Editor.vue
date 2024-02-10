@@ -144,6 +144,8 @@ const menu: MenuBarData = {
           value: uaMap[deviceGroup.value.viewerDevice],
           writable: true,
         });
+
+        console.log('iframe src: ', iframe.value.src);
       },
     },
     {
