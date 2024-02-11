@@ -302,3 +302,15 @@ html {
   }
 }
 </style>
+
+<style lang="scss" scoped>
+:deep(.el-dialog__header) {
+  padding: 16px;
+}
+:deep(iframe) {
+  display: block;
+}
+:deep(.el-dialog__footer) {
+  display: none;
+}
+</style>
