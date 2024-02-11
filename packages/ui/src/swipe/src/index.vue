@@ -1,26 +1,33 @@
 <template>
-  <van-swipe v-bind="config">
-    <van-swipe-item
-      v-for="(item, index) in config.item"
-      :key="index"
-      box-border
+  <div>
+    <van-swipe
+      v-bind="config"
       :style="{
-        padding: `${config.pt ?? 0}px ${config.pr ?? 0}px ${config.pb ?? 0}px ${config.pl ?? 0}px`,
+        height: `${config.height ?? 0}px`,
       }"
     >
-      <video
-        style="width: 100%"
-        v-if="item.isVideo"
-        :src="item.src"
-        crossorigin
-        controls
-        :autoplay="item.autoplay"
-        muted
-        ref="videoRef"
-      />
-      <img v-else :src="item.src" style="width: 100%" block object-cover align-bottom />
-    </van-swipe-item>
-  </van-swipe>
+      <van-swipe-item
+        v-for="(item, index) in config.item"
+        :key="index"
+        box-border
+        :style="{
+          padding: `${config.pt ?? 0}px ${config.pr ?? 0}px ${config.pb ?? 0}px ${config.pl ?? 0}px`,
+        }"
+      >
+        <video
+          style="width: 100%"
+          v-if="item.isVideo"
+          :src="item.src"
+          crossorigin
+          controls
+          :autoplay="item.autoplay"
+          muted
+          ref="videoRef"
+        />
+        <img v-else :src="item.src" style="width: 100%" block object-cover align-bottom />
+      </van-swipe-item>
+    </van-swipe>
+  </div>
 </template>
 
 <script setup>

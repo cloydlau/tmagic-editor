@@ -29,6 +29,11 @@ export default [
     name: 'vertical',
   },
   {
+    type: 'number',
+    text: '高度',
+    name: 'height',
+  },
+  {
     type: 'switch',
     text: '循环播放',
     name: 'loop',

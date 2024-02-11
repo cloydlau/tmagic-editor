@@ -97,7 +97,7 @@ const menu: MenuBarData = {
   left: [
     {
       type: 'text',
-      text: '魔方',
+      text: '低代码平台',
     },
   ],
   center: ['delete', 'undo', 'redo', 'guides', 'rule', 'zoom'],
