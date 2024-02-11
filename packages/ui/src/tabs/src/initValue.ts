@@ -1,5 +1,4 @@
 export default {
-  pt: 12,
   item: [
     {
       title: '首页',
@@ -23,4 +22,6 @@ export default {
       title: '运动',
     },
   ],
+  'lazy-render': true,
+  'show-header': true,
 };

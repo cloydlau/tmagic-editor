@@ -25,7 +25,7 @@ import { DataSourceManager } from '@tmagic/data-source';
 import App from './App.vue';
 
 import 'uno.css';
-import '@tmagic/utils/resetcss.css';
+// import '@tmagic/utils/resetcss.css';
 import 'vant/lib/index.css';
 
 Promise.all([

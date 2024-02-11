@@ -17,6 +17,7 @@
  */
 
 import Button from './button';
+import commodity from './commodity';
 import Container from './container';
 import hotarea from './hotarea';
 import Img from './img';
@@ -26,7 +27,7 @@ import PageFragment from './page-fragment';
 import PageFragmentContainer from './page-fragment-container';
 import Qrcode from './qrcode';
 import swipe from './swipe';
-import tab from './tab';
+import tabs from './tabs';
 import Text from './text';
 
 const ui: Record<string, any> = {
@@ -41,7 +42,8 @@ const ui: Record<string, any> = {
   'page-fragment': PageFragment,
   swipe,
   hotarea,
-  tab,
+  tabs,
+  commodity,
 };
 
 export default ui;

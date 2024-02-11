@@ -55,9 +55,14 @@ export default [
         type: 'hotarea',
       },
       {
-        icon: 'https://api.iconify.design/material-symbols:data-table.svg',
+        icon: 'https://api.iconify.design/gravity-ui:layout-tabs.svg',
         text: '标签页',
-        type: 'tab',
+        type: 'tabs',
+      },
+      {
+        icon: 'https://api.iconify.design/icon-park-outline:commodity.svg',
+        text: '商品',
+        type: 'commodity',
       },
     ],
   },

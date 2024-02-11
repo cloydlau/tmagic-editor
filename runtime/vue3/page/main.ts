@@ -32,7 +32,7 @@ import AppComponent from './App.vue';
 import { getLocalConfig } from './utils';
 
 import 'uno.css';
-import '@tmagic/utils/resetcss.css';
+// import '@tmagic/utils/resetcss.css';
 import 'vant/lib/index.css';
 
 const magicApp = createApp(AppComponent);

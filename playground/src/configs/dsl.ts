@@ -64,7 +64,7 @@ export default {
         width: '100%',
         height: '1728',
         backgroundImage: '',
-        backgroundColor: 'rgba(248, 218, 218, 1)',
+        backgroundColor: 'white',
         backgroundRepeat: 'no-repeat',
         backgroundSize: '100% 100%',
         color: '',

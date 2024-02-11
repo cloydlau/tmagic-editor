@@ -56,6 +56,7 @@ import { NodeType } from '@tmagic/schema';
 import type { CustomizeMoveableOptionsCallbackConfig } from '@tmagic/stage';
 import { asyncLoadJs } from '@tmagic/utils';
 
+import { getLocalConfig } from '../../../runtime/vue3/page/utils';
 import DeviceGroup from '../components/DeviceGroup.vue';
 import componentGroupList from '../configs/componentGroupList';
 import dsl from '../configs/dsl';
@@ -70,7 +71,7 @@ const editor = ref<InstanceType<typeof TMagicEditor>>();
 const deviceGroup = ref<InstanceType<typeof DeviceGroup>>();
 const iframe = ref<HTMLIFrameElement>();
 const previewVisible = ref(false);
-const value = ref(dsl);
+const value = ref(getLocalConfig()?.[0] || dsl);
 const defaultSelected = ref(dsl.items[0].id);
 const propsValues = ref<Record<string, any>>({});
 const propsConfigs = ref<Record<string, any>>({});
@@ -119,6 +120,23 @@ const menu: MenuBarData = {
     '/',
     {
       type: 'button',
+      text: '重置',
+      icon: 'https://api.iconify.design/carbon:reset.svg',
+      handler: () => {
+        value.value = dsl;
+      },
+    },
+    {
+      type: 'button',
+      text: '保存',
+      icon: Coin,
+      handler: () => {
+        save();
+        tMagicMessage.success('保存成功');
+      },
+    },
+    {
+      type: 'button',
       text: '预览',
       icon: Connection,
       handler: async (services) => {
@@ -146,15 +164,6 @@ const menu: MenuBarData = {
         });
 
         console.log('iframe src: ', iframe.value.src);
-      },
-    },
-    {
-      type: 'button',
-      text: '保存',
-      icon: Coin,
-      handler: () => {
-        save();
-        tMagicMessage.success('保存成功');
       },
     },
     '/',

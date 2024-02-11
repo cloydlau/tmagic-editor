@@ -1,7 +1,4 @@
 export default {
-  pt: 12,
-  pr: 12,
-  pl: 12,
   item: [
     {
       src: 'http://vjs.zencdn.net/v/oceans.mp4',

@@ -25,9 +25,9 @@ export default [
   },
   {
     type: 'select',
-    text: '样式风格类型',
-    name: 'type',
-    placeholder: '请选择',
+    text: '样式风格',
+    name: '_type',
+    defaultValue: 'line',
     options: [
       {
         text: 'line',
@@ -58,6 +58,12 @@ export default [
     type: 'colorPicker',
     text: '标签栏背景色',
     name: 'background',
+  },
+  {
+    type: 'switch',
+    text: '显示标签栏外边框',
+    name: 'border',
+    extra: '&nbsp;样式风格为 "line" 时有效',
   },
   {
     type: 'switch',
