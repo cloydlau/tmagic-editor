@@ -62,7 +62,7 @@ export default {
         right: '',
         bottom: '',
         width: '100%',
-        height: '1728',
+        // height: '1728',
         backgroundImage: '',
         backgroundColor: 'white',
         backgroundRepeat: 'no-repeat',

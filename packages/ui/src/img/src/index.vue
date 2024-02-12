@@ -1,5 +1,5 @@
 <template>
-  <img class="magic-ui-img" :src="config.src" @click="clickHandler" />
+  <img class="magic-ui-img" :src="config.src" @click="clickHandler" style="max-width: 100%" />
 </template>
 <script lang="ts" setup>
 import { MComponent } from '@tmagic/schema';

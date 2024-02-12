@@ -46,7 +46,7 @@ export default [
       },
       {
         icon: 'https://api.iconify.design/material-symbols:view-carousel-outline.svg',
-        text: '图片\n广告',
+        text: '轮播',
         type: 'swipe',
       },
       {

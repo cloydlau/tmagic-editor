@@ -1,5 +1,5 @@
 <template>
-  <img class="magic-ui-qrcode" :src="imgUrl" />
+  <img class="magic-ui-qrcode" :src="imgUrl" style="max-width: 100%" />
 </template>
 
 <script lang="ts" setup>

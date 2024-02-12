@@ -15,6 +15,7 @@
         }"
       >
         <video
+          w-full
           style="width: 100%"
           v-if="item.isVideo"
           :src="item.src"
@@ -24,7 +25,7 @@
           muted
           ref="videoRef"
         />
-        <img v-else :src="item.src" style="width: 100%" block object-cover align-bottom />
+        <img v-else :src="item.src" style="width: 100%" w-full block object-cover align-bottom />
       </van-swipe-item>
     </van-swipe>
   </div>
