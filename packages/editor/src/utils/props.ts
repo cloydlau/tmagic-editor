@@ -352,6 +352,7 @@ export const fillConfig = (config: FormConfig = []) => [
             text: 'id',
           },
           {
+            type: 'display',
             name: 'name',
             text: '组件名称',
           },
