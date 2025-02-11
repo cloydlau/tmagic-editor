@@ -19,11 +19,15 @@
 import path from 'path';
 
 import { defineConfig } from 'vite';
+// import { VantResolver } from '@vant/auto-import-resolver';
 import legacy from '@vitejs/plugin-legacy';
 import vue from '@vitejs/plugin-vue';
 import vueJsx from '@vitejs/plugin-vue-jsx';
 // @ts-ignore
 import externalGlobals from 'rollup-plugin-external-globals';
+// import Components from 'unplugin-vue-components/vite';
+import { presetAttributify, presetUno } from 'unocss';
+import UnoCSS from 'unocss/vite';
 
 export default defineConfig(({ mode }) => {
   if (['value', 'config', 'event', 'ds:value', 'ds:config', 'ds:event'].includes(mode)) {
@@ -62,13 +66,19 @@ export default defineConfig(({ mode }) => {
           targets: ['defaults', 'not IE 11'],
         }),
         externalGlobals({ vue: 'Vue' }, { exclude: [`./${mode}/index.html`] }),
+        /* Components({
+          resolvers: [VantResolver()],
+        }), */
+        UnoCSS({
+          presets: [presetAttributify(), presetUno()],
+        }),
       ],
 
       root: `./${mode}/`,
 
       publicDir: '../public',
 
-      base: `/tmagic-editor/playground/runtime/vue3/${mode}`,
+      base: process.env.NODE_ENV === 'production' ? './' : `/tmagic-editor/playground/runtime/vue3/${mode}`,
 
       build: {
         emptyOutDir: true,

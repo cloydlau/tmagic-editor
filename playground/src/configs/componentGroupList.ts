@@ -2,7 +2,7 @@ import { FolderOpened, Grid, PictureFilled, SwitchButton, Ticket, Tickets } from
 
 export default [
   {
-    title: '示例容器',
+    title: '容器',
     items: [
       {
         icon: FolderOpened,
@@ -22,7 +22,7 @@ export default [
     ],
   },
   {
-    title: '示例组件',
+    title: '组件',
     items: [
       {
         icon: Tickets,
@@ -43,6 +43,26 @@ export default [
         icon: Grid,
         text: '二维码',
         type: 'qrcode',
+      },
+      {
+        icon: 'https://api.iconify.design/material-symbols:view-carousel-outline.svg',
+        text: '轮播',
+        type: 'swipe',
+      },
+      {
+        icon: 'https://api.iconify.design/pixelarticons:section-plus.svg',
+        text: '热区',
+        type: 'hotarea',
+      },
+      {
+        icon: 'https://api.iconify.design/gravity-ui:layout-tabs.svg',
+        text: '标签页',
+        type: 'tabs',
+      },
+      {
+        icon: 'https://api.iconify.design/icon-park-outline:commodity.svg',
+        text: '商品',
+        type: 'commodity',
       },
     ],
   },

@@ -17,6 +17,7 @@
  */
 
 import { createApp, defineAsyncComponent } from 'vue';
+import Vant from 'vant';
 
 import Core from '@tmagic/core';
 import { DataSourceManager } from '@tmagic/data-source';
@@ -30,10 +31,12 @@ import request from './utils/request';
 import AppComponent from './App.vue';
 import { getLocalConfig } from './utils';
 
-import '@tmagic/utils/resetcss.css';
+import 'uno.css';
+// import '@tmagic/utils/resetcss.css';
+import 'vant/lib/index.css';
 
 const magicApp = createApp(AppComponent);
-
+magicApp.use(Vant);
 magicApp.use(request);
 
 Object.entries(components).forEach(([type, component]: [string, any]) => {

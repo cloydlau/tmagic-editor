@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" style="font-size: 100px">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,11 @@
   <link rel="icon" href="/favicon.png" type="image/png">
   <title>Vue3 Playground</title>
   <style>
-    html,body {margin: 0; padding: 0}
+    html,
+    body {
+      margin: 0;
+      padding: 0
+    }
 
     .magic-ui-page {
       overflow: hidden;
@@ -36,14 +41,122 @@
     .action-area {
       background-color: rgba(51, 153, 255, 0.5) !important;
     }
+
+    @-webkit-keyframes flip-to-square {
+      0% {
+        -webkit-transform: rotateX(-90deg);
+        transform: rotateX(-90deg);
+      }
+
+      50%,
+      75% {
+        -webkit-transform: rotateX(0);
+        transform: rotateX(0);
+      }
+
+      100% {
+        opacity: 0;
+        -webkit-transform: rotateX(0);
+        transform: rotateX(0);
+      }
+    }
+
+    @keyframes flip-to-square {
+      0% {
+        -webkit-transform: rotateX(-90deg);
+        transform: rotateX(-90deg);
+      }
+
+      50%,
+      75% {
+        -webkit-transform: rotateX(0);
+        transform: rotateX(0);
+      }
+
+      100% {
+        opacity: 0;
+        -webkit-transform: rotateX(0);
+        transform: rotateX(0);
+      }
+    }
+
+    .flip-to-square {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      height: 60px;
+      width: 60px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+    }
+
+    .flip-to-square div {
+      -webkit-animation: flip-to-square 1.5s calc(var(--delay) * 1s) infinite backwards;
+      animation: flip-to-square 1.5s calc(var(--delay) * 1s) infinite backwards;
+      background-color: lightgrey;
+    }
+
+    .flip-to-square div:nth-child(1) {
+      --delay: 0.1;
+    }
+
+    .flip-to-square div:nth-child(2) {
+      --delay: 0.2;
+    }
+
+    .flip-to-square div:nth-child(3) {
+      --delay: 0.3;
+    }
+
+    .flip-to-square div:nth-child(4) {
+      --delay: 0.4;
+    }
+
+    .flip-to-square div:nth-child(5) {
+      --delay: 0.5;
+    }
+
+    .flip-to-square div:nth-child(6) {
+      --delay: 0.6;
+    }
+
+    .flip-to-square div:nth-child(7) {
+      --delay: 0.7;
+    }
+
+    .flip-to-square div:nth-child(8) {
+      --delay: 0.8;
+    }
+
+    .flip-to-square div:nth-child(9) {
+      --delay: 0.9;
+    }
   </style>
 </head>
+
 <body style="font-size: 14px">
-  
-  <div id="app" class="in-editor"></div>
+
+  <div id="app" class="in-editor">
+    <div class="flip-to-square">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
 
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
   <script type="module" src="./main.ts"></script>
 </body>
+
 </html>

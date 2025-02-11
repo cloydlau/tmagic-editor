@@ -35,6 +35,7 @@ import MagicTable from '@tmagic/table';
 import App from './App.vue';
 import router from './route';
 
+import 'uno.css';
 import 'element-plus/dist/index.css';
 import '@tmagic/editor/src/theme/index.scss';
 

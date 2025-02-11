@@ -17,13 +17,17 @@
  */
 
 import Button from './button';
+import commodity from './commodity';
 import Container from './container';
+import hotarea from './hotarea';
 import Img from './img';
 import Overlay from './overlay';
 import Page from './page';
 import PageFragment from './page-fragment';
 import PageFragmentContainer from './page-fragment-container';
 import Qrcode from './qrcode';
+import swipe from './swipe';
+import tabs from './tabs';
 import Text from './text';
 
 const ui: Record<string, any> = {
@@ -36,6 +40,10 @@ const ui: Record<string, any> = {
   overlay: Overlay,
   'page-fragment-container': PageFragmentContainer,
   'page-fragment': PageFragment,
+  swipe,
+  hotarea,
+  tabs,
+  commodity,
 };
 
 export default ui;

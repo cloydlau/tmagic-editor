@@ -17,13 +17,16 @@
  */
 
 import { createApp } from 'vue';
+import Vant from 'vant';
 
 import Core from '@tmagic/core';
 import { DataSourceManager } from '@tmagic/data-source';
 
 import App from './App.vue';
 
-import '@tmagic/utils/resetcss.css';
+import 'uno.css';
+// import '@tmagic/utils/resetcss.css';
+import 'vant/lib/index.css';
 
 Promise.all([
   import('../.tmagic/comp-entry'),
@@ -31,6 +34,7 @@ Promise.all([
   import('../.tmagic/datasource-entry'),
 ]).then(([components, plugins, datasources]) => {
   const magicApp = createApp(App);
+  magicApp.use(Vant);
 
   Object.entries(components.default).forEach(([type, component]: [string, any]) => {
     magicApp.component(`magic-ui-${type}`, component);

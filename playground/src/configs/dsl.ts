@@ -54,7 +54,7 @@ export default {
       id: 'page_299',
       name: 'index',
       title: '',
-      layout: 'absolute',
+      layout: 'relative',
       style: {
         position: 'relative',
         left: 0,
@@ -62,9 +62,9 @@ export default {
         right: '',
         bottom: '',
         width: '100%',
-        height: '1728',
+        // height: '1728',
         backgroundImage: '',
-        backgroundColor: 'rgba(248, 218, 218, 1)',
+        backgroundColor: 'white',
         backgroundRepeat: 'no-repeat',
         backgroundSize: '100% 100%',
         color: '',
@@ -117,7 +117,7 @@ export default {
         ],
       },
       items: [
-        {
+        /* {
           type: 'text',
           id: 'text_9027',
           style: {
@@ -357,7 +357,7 @@ export default {
               created: [],
             },
           ],
-        },
+        }, */
       ],
     },
   ],

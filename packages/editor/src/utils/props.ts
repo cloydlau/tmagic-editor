@@ -337,7 +337,7 @@ export const fillConfig = (config: FormConfig = []) => [
     items: [
       {
         title: '属性',
-        labelWidth: '80px',
+        labelWidth: '120px',
         items: [
           // 组件类型，必须要有
           {
@@ -352,6 +352,7 @@ export const fillConfig = (config: FormConfig = []) => [
             text: 'id',
           },
           {
+            type: 'display',
             name: 'name',
             text: '组件名称',
           },
